@@ -28,8 +28,8 @@ module.exports.productList = [
       name: "ATHENA", 
       imgUrl: "https://lh3.googleusercontent.com/soR6JAuB0k-X3Az9G8-NJG9Cfoc4kyfgPUCYVtp6Ker9QQSHg9UQA52eFduoL_v_E5dHnnaB3LtZjBIAZdH6p5e2rLOm7aVm6eVoMg=w600",
       startDate: '2022/02/09',
-      startTime: '12:59',//24h formate
-      duration: 1,//minitues
+      startTime: '04:00',//24h formate
+      duration: 1200,//minitues
       price: 100,
       bidPriceLimit: 15,
       userId: null,
@@ -37,6 +37,18 @@ module.exports.productList = [
     },
     { 
       id: 3, 
+      name: "ATHENA", 
+      imgUrl: "https://lh3.googleusercontent.com/soR6JAuB0k-X3Az9G8-NJG9Cfoc4kyfgPUCYVtp6Ker9QQSHg9UQA52eFduoL_v_E5dHnnaB3LtZjBIAZdH6p5e2rLOm7aVm6eVoMg=w600",
+      startDate: '2022/02/10',
+      startTime: '04:00',//24h formate
+      duration: 720,//minitues
+      price: 100,
+      bidPriceLimit: 15,
+      userId: null,
+      userName : null
+    },
+    { 
+      id: 4, 
       name: "ATHENA", 
       imgUrl: "https://lh3.googleusercontent.com/soR6JAuB0k-X3Az9G8-NJG9Cfoc4kyfgPUCYVtp6Ker9QQSHg9UQA52eFduoL_v_E5dHnnaB3LtZjBIAZdH6p5e2rLOm7aVm6eVoMg=w600",
       startDate: '2022/02/09',

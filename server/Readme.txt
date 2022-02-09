@@ -1,3 +1,1 @@
-Recommanded
-Run npm install 
-Node version v^14.15.4
+Node version v^16.15.4

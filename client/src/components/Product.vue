@@ -75,11 +75,8 @@ export default {
     const drMinute = Number(duration % 60).toFixed(0)
     const totalHour = Number(stHour) + Number(drHour)
     const totalMinute = Number(stMinute) + Number(drMinute)
-    console.log('totalMinute', totalMinute)
     if (totalMinute >= 60) {
-      const bidOverTime = Number(totalMinute / 60).toFixed(0) + Number(totalHour) + ':' + Number(totalMinute % 60) + Number(totalMinute)
-      console.log('GETTER presenTime', presenTime)
-      console.log('GETTER bidOverTime', bidOverTime)
+      const bidOverTime = Number(Number(totalMinute / 60).toFixed(0)) + Number(totalHour) + ':' + Number(totalMinute % 60)
       if (presenTime >= bidOverTime && todayFromatedDate === startDate) {
           return userName
       } else {
@@ -87,8 +84,6 @@ export default {
       }
     } else {
       const bidOverTime = totalHour + ':' + totalMinute
-      console.log('SAMLLER presenTime', presenTime)
-      console.log('SAMLLER bidOverTime', bidOverTime)
       if (presenTime >= bidOverTime && todayFromatedDate === startDate) {
           return userName
       } else {

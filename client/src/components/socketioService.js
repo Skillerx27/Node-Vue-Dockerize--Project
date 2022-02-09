@@ -41,23 +41,15 @@ class SocketioService {
     // console.log('here', { productId: productId, price: price, userId: localStorage.getItem('userId') })
     const date = generateDate()
     const time = generateTime()
-    console.log('console.log', date, time)
      this.socket.emit('bidPrice', { productId: productId, bidPrice: price, userId: localStorage.getItem('userId'), userName: localStorage.getItem('userName'), date: date, time: time })
-    var resposeData
-    await new Promise(resolve => {
+     var resposeData
+     await new Promise(resolve => {
       this.socket.on('prodStatus', data => {
-        console.log('gotted data', data)
          resposeData = data
          resolve(resposeData)
       })
     })
-    console.log('this.locaData', resposeData)
     return resposeData
-    // await this.socket.on('prodStatus', async (data) => {
-    //   console.log('data==', data)
-    //   result = await data
-    //   return result
-    // })
   }
 }
 export default new SocketioService()

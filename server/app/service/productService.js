@@ -37,9 +37,11 @@ class productService {
         let output = { status: null, msg: null }
         let productDurationMinutes 
         try{
-            let selectedProduct = productData[data.productId]
+        let selectedProduct = productData[data.productId]
+        console.log("selectedProduct", selectedProduct)
 
         let productDurationHour = (selectedProduct.duration / 60).toFixed(0)
+        
         if(selectedProduct.duration >= 60){
             productDurationMinutes = selectedProduct.duration % 60
         }else {
@@ -56,6 +58,7 @@ class productService {
 
         let endTimeMinutes = Number(productTimeMinutes)+Number(productDurationMinutes)
         let endTime = Number(endTimeHour)+':'+Number(endTimeMinutes)
+
         // validating startDate
         if(selectedProduct.startDate == data.date){
             //validating the startTime
@@ -91,11 +94,15 @@ class productService {
                 
                 
             }
-        }else{
+        }else if(selectedProduct.startDate < data.date){
+            output.status = response.STATUS_FORBIDDEN
+            output.msg = text.Bid_Time_Over
+        }
+        else{
             output.status = response.STATUS_FORBIDDEN
             output.msg = text.Bid_Start_Failed
         }
-        }catch{
+        }catch(er){
             output.status = response.STATUS_FORBIDDEN
             output.msg = text.Bid_Start_Failed
         }
