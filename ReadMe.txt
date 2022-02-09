@@ -1,8 +1,10 @@
 RUN docker-compose up -d for running the project 
-Back is running 
+Backend is running 
 on port 3030 for serving http request
 on port 4040 for serving socket request
 on port 5050 for testing socket pre-test-case 
+
+fronted is running on port 8080
 
 for testing socket pre-test-case 
 goto test directory folder and RUN mocha -R spec 
